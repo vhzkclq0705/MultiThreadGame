@@ -22,9 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //startGame()
-        startTimer()
-        moveLeft()
+        startGame()
     }
     
     func startTimer() {
@@ -32,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @objc func zz() {
-        bullets.forEach { print($0.center) }
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -69,7 +67,7 @@ class ViewController: UIViewController {
     func createBullets(x: CGFloat, y: CGFloat) -> UIImageView {
         let bullet: UIImageView = {
             let imageView = UIImageView(frame: CGRect(x: x, y: y, width: 100, height: 100))
-            let random = Int.random(in: 0..<10)
+            let random = Int.random(in: 1..<10)
             
             imageView.image = UIImage(named: "bullet\(random)")
             
@@ -80,40 +78,69 @@ class ViewController: UIViewController {
     }
     
     func moveLeft() {
-        let y = CGFloat.random(in: 100..<(height - 100))
+        let y = ceil(CGFloat.random(in: 100..<(height - 100)))
+        let duration = ceil(Double.random(in: 1..<7))
+        let move = (self.width + 100) / duration * 0.1
+        let bullet = createBullets(x: width - 50, y: y)
+        var positionX = bullet.center.x
+        let positionY = bullet.center.y
         
-        let bullet = createBullets(x: width - 100, y: y)
         bullet.image = bullet.image?.withHorizontallyFlippedOrientation()
-        bullets.append(bullet)
         view.addSubview(bullet)
         
-        UIView.animate(
-            withDuration: Double.random(in: 1..<7),
-            delay: 0,
-            options: [],
-            animations: {
-                bullet.transform = CGAffineTransform(translationX: -self.width, y: 0)
-                print(bullet.center)
-            }) { _ in
+        DispatchQueue.global(qos: .userInteractive).async {
+            while positionX > 0 {
+                positionX -= move
+                
+                DispatchQueue.main.async {
+                    bullet.center.x = positionX
+                    let diffX = self.spaceShip.center.x - positionX
+                    let diffY = self.spaceShip.center.y - positionY
+                    
+                    if diffX <= 10 && diffX >= -10
+                        && diffY <= 10 && diffY >= -10 {
+                        self.die = true
+                    }
+                }
+                usleep(100000)
+            }
+            DispatchQueue.main.async {
                 bullet.removeFromSuperview()
             }
+        }
+        
     }
     
     func moveRight() {
-        let y = CGFloat.random(in: 100..<(height - 100))
+        let y = ceil(CGFloat.random(in: 100..<(height - 100)))
+        let duration = ceil(Double.random(in: 1..<7))
+        let move = self.width / duration * 0.1
+        let bullet = createBullets(x: -50, y: y)
+        var positionX = bullet.center.x
+        let positionY = bullet.center.y
         
-        let bullet = createBullets(x: 0, y: y)
         view.addSubview(bullet)
         
-        UIView.animate(
-            withDuration: Double.random(in: 1..<7),
-            delay: 0,
-            options: [],
-            animations: {
-                bullet.transform = CGAffineTransform(translationX: self.width, y: 0)
-            }) { _ in
+        DispatchQueue.global(qos: .userInteractive).async {
+            while positionX < self.width {
+                positionX += move
+                
+                DispatchQueue.main.async {
+                    bullet.center.x = positionX
+                    let diffX = self.spaceShip.center.x - positionX
+                    let diffY = self.spaceShip.center.y - positionY
+                    
+                    if diffX <= 10 && diffX >= -10
+                        && diffY <= 10 && diffY >= -10 {
+                        self.die = true
+                    }
+                }
+                usleep(100000)
+            }
+            DispatchQueue.main.async {
                 bullet.removeFromSuperview()
             }
+        }
     }
     
 }
