@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spacecard.ttf">
+            <string>Spacecard</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-f6-Vbq">
+                    <rect key="frame" x="20" y="8" width="47.5" height="28"/>
+                    <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frw-QC-s8x">
+                    <rect key="frame" x="198" y="8" width="102" height="28"/>
+                    <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHe-QR-oIC">
+                    <rect key="frame" x="101" y="8" width="54" height="28"/>
+                    <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="frw-QC-s8x" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="264-sF-Xv6"/>
+                <constraint firstItem="DM1-f6-Vbq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QL6-Th-U90"/>
+                <constraint firstItem="DM1-f6-Vbq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="R9D-bu-fMo"/>
+                <constraint firstAttribute="trailing" secondItem="frw-QC-s8x" secondAttribute="trailing" constant="20" id="ecR-ES-SBh"/>
+                <constraint firstItem="rHe-QR-oIC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.8" id="fUb-Ia-DRc"/>
+                <constraint firstItem="rHe-QR-oIC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="it6-o4-7zQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="228.98550724637684" y="112.16517857142857"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spacecard.ttf">
+            <string>Spacecard</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingTableViewCell" id="KGk-i7-Jjw" customClass="RankingTableViewCell" customModule="MultiThreadGame" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7E-Qk-CiD">
+                        <rect key="frame" x="20" y="8" width="8.5" height="28"/>
+                        <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
+                        <color key="textColor" red="0.44107518051609851" green="0.4283456353521865" blue="0.39129902064528554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EX-mT-SaU">
+                        <rect key="frame" x="253.5" y="8" width="46.5" height="28"/>
+                        <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ak-3L-7EB">
+                        <rect key="frame" x="75.5" y="8" width="105" height="28"/>
+                        <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="4Ak-3L-7EB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.8" id="DNW-IJ-8tR"/>
+                    <constraint firstItem="8EX-mT-SaU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b3Z-hz-2BL"/>
+                    <constraint firstItem="P7E-Qk-CiD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cJu-qL-qcW"/>
+                    <constraint firstItem="P7E-Qk-CiD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jYC-mG-5Va"/>
+                    <constraint firstItem="4Ak-3L-7EB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wRc-MT-NPA"/>
+                    <constraint firstAttribute="trailing" secondItem="8EX-mT-SaU" secondAttribute="trailing" constant="20" id="zvs-f1-4Xy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="difficultyLabel" destination="8EX-mT-SaU" id="apD-Ch-hII"/>
+                <outlet property="rankLabel" destination="P7E-Qk-CiD" id="tBZ-kp-x3x"/>
+                <outlet property="scoreLabel" destination="4Ak-3L-7EB" id="Xas-1C-mzB"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="76"/>
+        </tableViewCell>
+    </objects>
+</document>

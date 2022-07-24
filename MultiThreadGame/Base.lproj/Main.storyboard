@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.608695652173921" y="95.758928571428569"/>
+            <point key="canvasLocation" x="65" y="96"/>
         </scene>
         <!--Ready View Controller-->
         <scene sceneID="fcg-fY-fBC">
@@ -224,7 +224,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsS-Ow-4gJ">
-                                <rect key="frame" x="132" y="518.5" width="150" height="50"/>
+                                <rect key="frame" x="132" y="473.5" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CrJ-V4-a70"/>
                                     <constraint firstAttribute="width" constant="150" id="Jzw-30-gpC"/>
@@ -240,13 +240,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-2N-5SL">
-                                <rect key="frame" x="154.5" y="638.5" width="105.5" height="28"/>
+                                <rect key="frame" x="154.5" y="653.5" width="105.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oxk-sG-4bV">
-                                <rect key="frame" x="107" y="686.5" width="200.5" height="38"/>
+                                <rect key="frame" x="107" y="701.5" width="200.5" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-cN-bwA">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="38"/>
@@ -281,20 +281,39 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFu-MK-HYm">
+                                <rect key="frame" x="132" y="553.5" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2rm-JC-GeU"/>
+                                    <constraint firstAttribute="width" constant="150" id="jSV-ly-5GZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ranking" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Spacecard" family="Spacecard" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapStartButton:" destination="skP-Hz-WdO" eventType="touchUpInside" id="ou5-AT-s8W"/>
+                                    <segue destination="qFP-vt-3J1" kind="presentation" id="pxm-ZR-2lN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kcv-hj-kzf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ex7-2N-5SL" firstAttribute="top" secondItem="TFu-MK-HYm" secondAttribute="bottom" constant="50" id="5ar-hi-P2F"/>
                             <constraint firstItem="NK4-Sa-C3h" firstAttribute="top" secondItem="Gwo-TG-u9p" secondAttribute="top" id="7mk-Nc-fJO"/>
-                            <constraint firstItem="qsS-Ow-4gJ" firstAttribute="centerY" secondItem="kcv-hj-kzf" secondAttribute="centerY" multiplier="1.2" id="Aj8-c1-cq1"/>
+                            <constraint firstItem="qsS-Ow-4gJ" firstAttribute="centerY" secondItem="kcv-hj-kzf" secondAttribute="centerY" multiplier="1.1" id="Aj8-c1-cq1"/>
                             <constraint firstItem="oxk-sG-4bV" firstAttribute="centerX" secondItem="kcv-hj-kzf" secondAttribute="centerX" id="AtH-PH-7Ey"/>
                             <constraint firstItem="X1Z-2c-ID6" firstAttribute="centerX" secondItem="kcv-hj-kzf" secondAttribute="centerX" id="Ewz-WW-4dJ"/>
                             <constraint firstItem="NK4-Sa-C3h" firstAttribute="leading" secondItem="kcv-hj-kzf" secondAttribute="leading" id="H1T-Oz-tzq"/>
                             <constraint firstItem="oxk-sG-4bV" firstAttribute="top" secondItem="ex7-2N-5SL" secondAttribute="bottom" constant="20" id="JD3-Qg-UQ3"/>
+                            <constraint firstItem="TFu-MK-HYm" firstAttribute="centerX" secondItem="kcv-hj-kzf" secondAttribute="centerX" id="JdA-0I-tJW"/>
                             <constraint firstItem="qsS-Ow-4gJ" firstAttribute="centerX" secondItem="kcv-hj-kzf" secondAttribute="centerX" id="Ksi-xI-VX4"/>
+                            <constraint firstItem="TFu-MK-HYm" firstAttribute="top" secondItem="qsS-Ow-4gJ" secondAttribute="bottom" constant="30" id="Qbl-ZQ-MxZ"/>
                             <constraint firstAttribute="bottom" secondItem="NK4-Sa-C3h" secondAttribute="bottom" id="Wqm-47-F4B"/>
                             <constraint firstItem="ex7-2N-5SL" firstAttribute="centerX" secondItem="kcv-hj-kzf" secondAttribute="centerX" id="XIL-nC-qcr"/>
-                            <constraint firstItem="ex7-2N-5SL" firstAttribute="top" secondItem="qsS-Ow-4gJ" secondAttribute="bottom" constant="70" id="i2w-Bm-UMK"/>
                             <constraint firstItem="kcv-hj-kzf" firstAttribute="trailing" secondItem="NK4-Sa-C3h" secondAttribute="trailing" id="qCQ-KH-O1u"/>
                             <constraint firstItem="X1Z-2c-ID6" firstAttribute="centerY" secondItem="kcv-hj-kzf" secondAttribute="centerY" multiplier="0.6" constant="1" id="tQ9-eY-O3a"/>
                         </constraints>
@@ -313,16 +332,57 @@
             </objects>
             <point key="canvasLocation" x="-699" y="96"/>
         </scene>
+        <!--Ranking View Controller-->
+        <scene sceneID="n4a-pq-V5A">
+            <objects>
+                <viewController id="qFP-vt-3J1" customClass="RankingViewController" customModule="MultiThreadGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gtl-jX-jVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background5" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-RT-4UA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZG-yh-7wQ">
+                                <rect key="frame" x="20" y="64" width="374" height="738"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oEC-a1-8Yw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r6G-RT-4UA" firstAttribute="top" secondItem="gtl-jX-jVn" secondAttribute="top" id="5ge-2J-UK9"/>
+                            <constraint firstItem="oEC-a1-8Yw" firstAttribute="trailing" secondItem="NZG-yh-7wQ" secondAttribute="trailing" constant="20" id="SRw-Xk-cts"/>
+                            <constraint firstItem="oEC-a1-8Yw" firstAttribute="bottom" secondItem="NZG-yh-7wQ" secondAttribute="bottom" constant="40" id="fh9-rF-gVZ"/>
+                            <constraint firstItem="r6G-RT-4UA" firstAttribute="leading" secondItem="oEC-a1-8Yw" secondAttribute="leading" id="gJf-Fs-abN"/>
+                            <constraint firstAttribute="bottom" secondItem="r6G-RT-4UA" secondAttribute="bottom" id="i6r-kA-toP"/>
+                            <constraint firstItem="NZG-yh-7wQ" firstAttribute="leading" secondItem="oEC-a1-8Yw" secondAttribute="leading" constant="20" id="mBA-rg-8zy"/>
+                            <constraint firstItem="oEC-a1-8Yw" firstAttribute="trailing" secondItem="r6G-RT-4UA" secondAttribute="trailing" id="oyp-GE-E31"/>
+                            <constraint firstItem="NZG-yh-7wQ" firstAttribute="top" secondItem="gtl-jX-jVn" secondAttribute="topMargin" constant="20" id="xDK-LS-edr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="NZG-yh-7wQ" id="fRn-sb-0RT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCK-Ta-ZNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="782.8125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowtriangle.backward.fill" catalog="system" width="128" height="113"/>
         <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
         <image name="background1" width="347" height="347"/>
         <image name="background4" width="347" height="347"/>
+        <image name="background5" width="275" height="183"/>
         <image name="gameover" width="121" height="66"/>
         <image name="ship2" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

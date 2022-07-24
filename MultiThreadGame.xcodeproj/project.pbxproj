@@ -13,6 +13,10 @@
 		7610DD902887205200CA03BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7610DD8E2887205200CA03BC /* Main.storyboard */; };
 		7610DD922887205500CA03BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7610DD912887205500CA03BC /* Assets.xcassets */; };
 		7610DD952887205500CA03BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7610DD932887205500CA03BC /* LaunchScreen.storyboard */; };
+		76239191288D908E00790775 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76239190288D908E00790775 /* RankingViewController.swift */; };
+		76239195288D917100790775 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76239193288D917000790775 /* RankingTableViewCell.swift */; };
+		76239196288D917100790775 /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76239194288D917000790775 /* RankingTableViewCell.xib */; };
+		76239199288D937100790775 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76239198288D937100790775 /* Rank.swift */; };
 		768FE5362887F2DC00B0F76D /* boom.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE5352887F2DC00B0F76D /* boom.mp4 */; };
 		768FE53D2887F3C900B0F76D /* medium.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE5392887F3C700B0F76D /* medium.mp3 */; };
 		768FE53E2887F3C900B0F76D /* hard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE53A2887F3C800B0F76D /* hard.mp3 */; };
@@ -22,6 +26,8 @@
 		768FE5442888040500B0F76D /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FE5432888040500B0F76D /* ReadyViewController.swift */; };
 		768FE5482888051800B0F76D /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FE5472888051800B0F76D /* MusicPlayer.swift */; };
 		768FE5502888174B00B0F76D /* teemo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE54F2888174B00B0F76D /* teemo.mp3 */; };
+		76E09576288DA6B5007E00D6 /* RankingTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */; };
+		76E09578288DA702007E00D6 /* RankingTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +39,10 @@
 		7610DD912887205500CA03BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7610DD942887205500CA03BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7610DD962887205500CA03BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76239190288D908E00790775 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		76239193288D917000790775 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		76239194288D917000790775 /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		76239198288D937100790775 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
 		768FE5352887F2DC00B0F76D /* boom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = boom.mp4; sourceTree = "<group>"; };
 		768FE5392887F3C700B0F76D /* medium.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = medium.mp3; sourceTree = "<group>"; };
 		768FE53A2887F3C800B0F76D /* hard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hard.mp3; sourceTree = "<group>"; };
@@ -42,6 +52,8 @@
 		768FE5432888040500B0F76D /* ReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
 		768FE5472888051800B0F76D /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		768FE54F2888174B00B0F76D /* teemo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teemo.mp3; sourceTree = "<group>"; };
+		76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewHeaderView.swift; sourceTree = "<group>"; };
+		76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,8 @@
 		7610DD872887205200CA03BC /* MultiThreadGame */ = {
 			isa = PBXGroup;
 			children = (
+				76239197288D936100790775 /* Model */,
+				76239192288D914F00790775 /* Cell */,
 				768FE5462888050800B0F76D /* Music */,
 				768FE545288804E600B0F76D /* Controllers */,
 				768FE5372887F3AA00B0F76D /* Font */,
@@ -87,6 +101,25 @@
 				7610DD962887205500CA03BC /* Info.plist */,
 			);
 			path = MultiThreadGame;
+			sourceTree = "<group>";
+		};
+		76239192288D914F00790775 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */,
+				76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */,
+				76239193288D917000790775 /* RankingTableViewCell.swift */,
+				76239194288D917000790775 /* RankingTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		76239197288D936100790775 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76239198288D937100790775 /* Rank.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		768FE5342887F2C000B0F76D /* MP4 */ = {
@@ -122,6 +155,7 @@
 			children = (
 				768FE5432888040500B0F76D /* ReadyViewController.swift */,
 				7610DD8C2887205200CA03BC /* PlayViewController.swift */,
+				76239190288D908E00790775 /* RankingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E09578288DA702007E00D6 /* RankingTableViewHeaderView.xib in Resources */,
+				76239196288D917100790775 /* RankingTableViewCell.xib in Resources */,
 				768FE53F2887F3C900B0F76D /* easy.mp3 in Resources */,
 				7610DD952887205500CA03BC /* LaunchScreen.storyboard in Resources */,
 				768FE53D2887F3C900B0F76D /* medium.mp3 in Resources */,
@@ -213,10 +249,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				768FE5482888051800B0F76D /* MusicPlayer.swift in Sources */,
+				76239199288D937100790775 /* Rank.swift in Sources */,
+				76E09576288DA6B5007E00D6 /* RankingTableViewHeaderView.swift in Sources */,
 				768FE5442888040500B0F76D /* ReadyViewController.swift in Sources */,
 				7610DD8D2887205200CA03BC /* PlayViewController.swift in Sources */,
 				7610DD892887205200CA03BC /* AppDelegate.swift in Sources */,
+				76239195288D917100790775 /* RankingTableViewCell.swift in Sources */,
 				7610DD8B2887205200CA03BC /* SceneDelegate.swift in Sources */,
+				76239191288D908E00790775 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
