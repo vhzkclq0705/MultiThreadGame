@@ -28,6 +28,7 @@
 		768FE5502888174B00B0F76D /* teemo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE54F2888174B00B0F76D /* teemo.mp3 */; };
 		76E09576288DA6B5007E00D6 /* RankingTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */; };
 		76E09578288DA702007E00D6 /* RankingTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */; };
+		76E0957B288DAE6F007E00D6 /* RankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0957A288DAE6F007E00D6 /* RankManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		768FE54F2888174B00B0F76D /* teemo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teemo.mp3; sourceTree = "<group>"; };
 		76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewHeaderView.swift; sourceTree = "<group>"; };
 		76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewHeaderView.xib; sourceTree = "<group>"; };
+		76E0957A288DAE6F007E00D6 /* RankManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +88,11 @@
 		7610DD872887205200CA03BC /* MultiThreadGame */ = {
 			isa = PBXGroup;
 			children = (
+				76E09579288DAE64007E00D6 /* Manager */,
 				76239197288D936100790775 /* Model */,
 				76239192288D914F00790775 /* Cell */,
-				768FE5462888050800B0F76D /* Music */,
 				768FE545288804E600B0F76D /* Controllers */,
+				768FE5462888050800B0F76D /* Music */,
 				768FE5372887F3AA00B0F76D /* Font */,
 				768FE5382887F3AE00B0F76D /* MP3 */,
 				768FE5342887F2C000B0F76D /* MP4 */,
@@ -166,6 +169,14 @@
 				768FE5472888051800B0F76D /* MusicPlayer.swift */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		76E09579288DAE64007E00D6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				76E0957A288DAE6F007E00D6 /* RankManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				768FE5482888051800B0F76D /* MusicPlayer.swift in Sources */,
+				76E0957B288DAE6F007E00D6 /* RankManager.swift in Sources */,
 				76239199288D937100790775 /* Rank.swift in Sources */,
 				76E09576288DA6B5007E00D6 /* RankingTableViewHeaderView.swift in Sources */,
 				768FE5442888040500B0F76D /* ReadyViewController.swift in Sources */,

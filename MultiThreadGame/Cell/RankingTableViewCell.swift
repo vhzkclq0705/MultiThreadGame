@@ -27,9 +27,9 @@ class RankingTableViewCell: UITableViewCell {
     }
     
     func updateRankLabel(_ index: Int) {
-        rankLabel.text = "\(index)"
+        rankLabel.text = "\(index + 1)"
         
-        switch index {
+        switch index + 1 {
         case 1: rankLabel.textColor = #colorLiteral(red: 0.8352941176, green: 0.631372549, blue: 0.1176470588, alpha: 1)
         case 2: rankLabel.textColor = #colorLiteral(red: 0.6392156863, green: 0.6392156863, blue: 0.6392156863, alpha: 1)
         case 3: rankLabel.textColor = #colorLiteral(red: 0.8039215686, green: 0.4980392157, blue: 0.1960784314, alpha: 1)
@@ -37,13 +37,17 @@ class RankingTableViewCell: UITableViewCell {
         }
     }
     
-    func updateDifficultyLabel(_ difficulty: String) {
-        difficultyLabel.text = difficulty
-        
+    func updateDifficultyLabel(_ difficulty: Int) {
         switch difficulty {
-        case "easy": difficultyLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 1, alpha: 1)
-        case "medium": difficultyLabel.textColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)
-        case "hard": difficultyLabel.textColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        case 0:
+            difficultyLabel.text = "easy"
+            difficultyLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 1, alpha: 1)
+        case 1:
+            difficultyLabel.text = "medium"
+            difficultyLabel.textColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)
+        case 2:
+            difficultyLabel.text = "hard"
+            difficultyLabel.textColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
         default: break
         }
     }

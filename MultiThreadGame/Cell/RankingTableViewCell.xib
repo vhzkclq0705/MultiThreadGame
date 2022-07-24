@@ -22,13 +22,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7E-Qk-CiD">
-                        <rect key="frame" x="20" y="8" width="8.5" height="28"/>
+                        <rect key="frame" x="40" y="8" width="8.5" height="28"/>
                         <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
                         <color key="textColor" red="0.44107518051609851" green="0.4283456353521865" blue="0.39129902064528554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EX-mT-SaU">
-                        <rect key="frame" x="253.5" y="8" width="46.5" height="28"/>
+                        <rect key="frame" x="223.5" y="8" width="46.5" height="28"/>
                         <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ak-3L-7EB">
                         <rect key="frame" x="75.5" y="8" width="105" height="28"/>
                         <fontDescription key="fontDescription" name="Spacecard" family="Spacecard" pointSize="20"/>
-                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -44,10 +44,10 @@
                 <constraints>
                     <constraint firstItem="4Ak-3L-7EB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.8" id="DNW-IJ-8tR"/>
                     <constraint firstItem="8EX-mT-SaU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b3Z-hz-2BL"/>
-                    <constraint firstItem="P7E-Qk-CiD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cJu-qL-qcW"/>
+                    <constraint firstItem="P7E-Qk-CiD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="cJu-qL-qcW"/>
                     <constraint firstItem="P7E-Qk-CiD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jYC-mG-5Va"/>
                     <constraint firstItem="4Ak-3L-7EB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wRc-MT-NPA"/>
-                    <constraint firstAttribute="trailing" secondItem="8EX-mT-SaU" secondAttribute="trailing" constant="20" id="zvs-f1-4Xy"/>
+                    <constraint firstAttribute="trailing" secondItem="8EX-mT-SaU" secondAttribute="trailing" constant="50" id="zvs-f1-4Xy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -20,9 +20,11 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var gameoverTotalLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     
+    let rankManager = RankManager.shared
     let musicPlayer = MusicPlayer()
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
+    var bulletLimit = 100
     var image = 1
     var difficulty: Int!
     var score = 0
@@ -40,35 +42,31 @@ class PlayViewController: UIViewController {
         let touch = touches.first! as UITouch
         let point = touch.location(in: backgroundView)
         
-        spaceShip.center = point
+        if point.y >= 150 && point.y <= height - 50 {
+            spaceShip.center = point
+        }
     }
     
     func setViewController() {
         DispatchQueue.main.async {
             switch self.image {
-            case 0:
-                self.spaceShip.image = UIImage(named: "ship1")
-            case 1:
-                self.spaceShip.image = UIImage(named: "ship2")
-            case 2:
-                self.spaceShip.image = UIImage(named: "ship3")
+            case 0: self.spaceShip.image = UIImage(named: "ship1")
+            case 1: self.spaceShip.image = UIImage(named: "ship2")
+            case 2: self.spaceShip.image = UIImage(named: "ship3")
             default: break
             }
             
             switch self.difficulty {
-            case 0:
-                self.backgroundView.image = UIImage(named: "background2")
-            case 1:
-                self.backgroundView.image = UIImage(named: "background3")
-            case 2:
-                self.backgroundView.image = UIImage(named: "background4")
+            case 0: self.backgroundView.image = UIImage(named: "background2")
+            case 1: self.backgroundView.image = UIImage(named: "background3")
+            case 2: self.backgroundView.image = UIImage(named: "background4")
             default: break
             }
         }
     }
     
     func playMusic() {
-        var music = "medium"
+        var music: String!
         switch difficulty {
         case 0: music = "easy"
         case 1: music = "medium"
@@ -86,33 +84,42 @@ class PlayViewController: UIViewController {
     func startGame() {
         DispatchQueue.global(qos: .userInteractive).async {
             while self.die == false {
-                var sec = 4
+                var sec: Float!
                 switch self.difficulty {
-                case 0: sec = Int.random(in: 3..<7)
-                case 1: sec = Int.random(in: 1..<5)
-                case 2: sec = Int.random(in: 0..<3)
+                case 0: sec = Float.random(in: 1..<5)
+                case 1: sec = Float.random(in: 0.5..<4)
+                case 2: sec = Float.random(in: 0..<3)
                 default: break
                 }
                 
-                DispatchQueue.main.async {
-                    self.moveRight()
+                if self.bulletLimit > 0 {
+                    DispatchQueue.main.async {
+                        self.moveRight()
+                        self.bulletLimit -= 1
+                    }
                 }
+                
                 usleep(useconds_t(sec * 100000))
             }
         }
         
         DispatchQueue.global(qos: .userInteractive).async {
             while self.die == false {
-                var sec = 4
+                var sec: Float!
                 switch self.difficulty {
-                case 0: sec = Int.random(in: 3..<7)
-                case 1: sec = Int.random(in: 1..<5)
-                case 2: sec = Int.random(in: 0..<3)
+                case 0: sec = Float.random(in: 1..<5)
+                case 1: sec = Float.random(in: 0.5..<4)
+                case 2: sec = Float.random(in: 0..<3)
                 default: break
                 }
-                DispatchQueue.main.async {
-                    self.moveLeft()
+                
+                if self.bulletLimit > 0 {
+                    DispatchQueue.main.async {
+                        self.moveLeft()
+                        self.bulletLimit -= 1
+                    }
                 }
+                
                 usleep(useconds_t(sec * 100000))
             }
         }
@@ -121,14 +128,15 @@ class PlayViewController: UIViewController {
             while self.die == false {
                 switch self.difficulty {
                 case 0: self.score += 1000
-                case 1: self.score += 3000
-                case 2: self.score += 5000
+                case 1: self.score += 1500
+                case 2: self.score += 2000
                 default: break
                 }
                 
                 DispatchQueue.main.async {
                     self.scoreLabel.text = "\(self.score)"
                 }
+                
                 usleep(100000)
             }
         }
@@ -172,15 +180,18 @@ class PlayViewController: UIViewController {
                     let diffY = self.spaceShip.center.y - positionY
                     
                     if diffX <= 10 && diffX >= -8
-                        && diffY <= 10 && diffY >= -8 {
+                        && diffY <= 10 && diffY >= -8
+                        && self.die == false {
                         self.boom()
                         self.die = true
                     }
                 }
+                
                 usleep(100000)
             }
             DispatchQueue.main.async {
                 self.bullets += 1
+                self.bulletLimit += 1
                 bullet.removeFromSuperview()
             }
         }
@@ -207,32 +218,39 @@ class PlayViewController: UIViewController {
                     let diffY = self.spaceShip.center.y - positionY
                     
                     if diffX <= 10 && diffX >= -8
-                        && diffY <= 10 && diffY >= -8 {
+                        && diffY <= 10 && diffY >= -8
+                        && self.die == false {
                         self.boom()
                         self.die = true
                     }
                 }
+                
                 usleep(100000)
             }
             DispatchQueue.main.async {
                 self.bullets += 1
+                self.bulletLimit += 1
                 bullet.removeFromSuperview()
             }
         }
     }
     
     func boom() {
-        spaceShip.frame.origin.y = -10
+        saveRank()
+        spaceShip.image = UIImage()
+        boomImageView.isHidden = false
+        
         musicPlayer.stopAudio()
         musicPlayer.playAudio("teemo")
-        boomImageView.isHidden = false
-        guard let path = Bundle.main.path(
-            forResource: "boom",
-            ofType: "mp4") else { return }
+        
+        guard let path = Bundle.main.path(forResource: "boom", ofType: "mp4") else {
+            return
+        }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = boomImageView.bounds
         boomImageView.layer.addSublayer(playerLayer)
+        
         playerLayer.videoGravity = .resize
         player.play()
         
@@ -248,6 +266,10 @@ class PlayViewController: UIViewController {
         gameoverScoreLabel.text = "\(score)"
         gameoverBulletsLabel.text = "\(bullets * 1000)"
         gameoverTotalLabel.text = "\(score + bullets * 1000)"
+    }
+    
+    func saveRank() {
+        rankManager.saveRank(score: score, difficulty: difficulty)
     }
     
     @IBAction func didTapExitButton(_ sender: Any) {

@@ -294,7 +294,6 @@
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapStartButton:" destination="skP-Hz-WdO" eventType="touchUpInside" id="ou5-AT-s8W"/>
                                     <segue destination="qFP-vt-3J1" kind="presentation" id="pxm-ZR-2lN"/>
                                 </connections>
                             </button>
@@ -343,8 +342,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background5" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-RT-4UA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZG-yh-7wQ">
-                                <rect key="frame" x="20" y="64" width="374" height="738"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZG-yh-7wQ">
+                                <rect key="frame" x="20" y="84" width="374" height="718"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -358,7 +357,7 @@
                             <constraint firstAttribute="bottom" secondItem="r6G-RT-4UA" secondAttribute="bottom" id="i6r-kA-toP"/>
                             <constraint firstItem="NZG-yh-7wQ" firstAttribute="leading" secondItem="oEC-a1-8Yw" secondAttribute="leading" constant="20" id="mBA-rg-8zy"/>
                             <constraint firstItem="oEC-a1-8Yw" firstAttribute="trailing" secondItem="r6G-RT-4UA" secondAttribute="trailing" id="oyp-GE-E31"/>
-                            <constraint firstItem="NZG-yh-7wQ" firstAttribute="top" secondItem="gtl-jX-jVn" secondAttribute="topMargin" constant="20" id="xDK-LS-edr"/>
+                            <constraint firstItem="NZG-yh-7wQ" firstAttribute="top" secondItem="gtl-jX-jVn" secondAttribute="topMargin" constant="40" id="xDK-LS-edr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -375,7 +374,7 @@
         <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
         <image name="background1" width="347" height="347"/>
         <image name="background4" width="347" height="347"/>
-        <image name="background5" width="275" height="183"/>
+        <image name="background5" width="1280" height="1024"/>
         <image name="gameover" width="121" height="66"/>
         <image name="ship2" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">

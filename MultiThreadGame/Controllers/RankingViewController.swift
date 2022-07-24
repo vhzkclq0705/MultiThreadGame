@@ -11,11 +11,12 @@ class RankingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var rankList = [Rank]()
+    let rankManager = RankManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewController()
+        fetchRank()
     }
     
     func setViewController() {
@@ -30,12 +31,8 @@ class RankingViewController: UIViewController {
             forHeaderFooterViewReuseIdentifier: "RankingTableViewHeaderView")
     }
     
-    func fetchRankList() {
-        guard let data = UserDefaults.standard.data(forKey: "rank") else {
-            return
-        }
-        
-//        rankList = try? PropertyListDecoder().decode([Rank.self], from: data)
+    func fetchRank() {
+        rankManager.loadRank()
     }
 
 }
@@ -45,19 +42,30 @@ extension RankingViewController: UITableViewDelegate,
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let view = tableView.dequeueReusableHeaderFooterView(
             withIdentifier: "RankingTableViewHeaderView") as? RankingTableViewHeaderView else {
-            return nil
+            return UIView()
         }
         
         return view
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return rankManager.numOfRanks
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "RankingTableViewCell",
+            for: indexPath) as? RankingTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let rank = rankManager.returnRank(indexPath.row)
+        cell.updateCell(rank: rank, index: indexPath.row)
+        
+        return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
 }

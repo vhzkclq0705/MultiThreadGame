@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Rank: Decodable {
+struct Rank: Codable {
     let score: Int
-    let difficulty: String
+    let difficulty: Int
 }

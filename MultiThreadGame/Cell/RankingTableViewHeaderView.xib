@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RankingTableViewHeaderView" customModule="MultiThreadGame" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -36,7 +36,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="frw-QC-s8x" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="264-sF-Xv6"/>
                 <constraint firstItem="DM1-f6-Vbq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QL6-Th-U90"/>
@@ -46,7 +45,7 @@
                 <constraint firstItem="rHe-QR-oIC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="it6-o4-7zQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="228.98550724637684" y="112.16517857142857"/>
+            <point key="canvasLocation" x="168" y="103"/>
         </view>
     </objects>
 </document>
