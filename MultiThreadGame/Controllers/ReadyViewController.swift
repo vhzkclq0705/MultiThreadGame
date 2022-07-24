@@ -10,6 +10,7 @@ import AVFoundation
 
 class ReadyViewController: UIViewController {
 
+    // MARK: - UI
     @IBOutlet weak var spaceshipImageView: UIImageView!
     @IBOutlet weak var spaceshipLeftButton: UIButton!
     @IBOutlet weak var spaceshipRightButton: UIButton!
@@ -18,10 +19,12 @@ class ReadyViewController: UIViewController {
     @IBOutlet weak var difficultyLeftButton: UIButton!
     @IBOutlet weak var difficultyRightButton: UIButton!
     
+    // MARK: - Property
     let musicPlayer = MusicPlayer()
     var spaceship = 1
     var difficulty = 0
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,6 +33,7 @@ class ReadyViewController: UIViewController {
         playMusic()
     }
 
+    // MARK: - Funcs
     func playMusic() {
         musicPlayer.playAudio("ready")
     }
@@ -38,6 +42,7 @@ class ReadyViewController: UIViewController {
         musicPlayer.stopAudio()
     }
     
+    // MARK: - Actions
     @IBAction func didTapStartButton(_ sender: Any) {
         stopMusic()
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PlayViewController") as? PlayViewController else { return }

@@ -10,6 +10,7 @@ import AVFoundation
 
 class PlayViewController: UIViewController {
     
+    // MARK: - UI
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var boomImageView: UIImageView!
     @IBOutlet weak var spaceShip: UIImageView!
@@ -20,6 +21,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var gameoverTotalLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
     
+    // MARK: - Property
     let rankManager = RankManager.shared
     let musicPlayer = MusicPlayer()
     let width = UIScreen.main.bounds.width
@@ -31,6 +33,7 @@ class PlayViewController: UIViewController {
     var bullets = 0
     var die = false
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewController()
@@ -38,6 +41,7 @@ class PlayViewController: UIViewController {
         startGame()
     }
     
+    // MARK: - Detect Touch moved
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first! as UITouch
         let point = touch.location(in: backgroundView)
@@ -47,6 +51,7 @@ class PlayViewController: UIViewController {
         }
     }
     
+    // MARK: - Setup
     func setViewController() {
         DispatchQueue.main.async {
             switch self.image {
@@ -65,6 +70,7 @@ class PlayViewController: UIViewController {
         }
     }
     
+    // MARK: - Funcs
     func playMusic() {
         var music: String!
         switch difficulty {
@@ -272,6 +278,7 @@ class PlayViewController: UIViewController {
         rankManager.saveRank(score: score, difficulty: difficulty)
     }
     
+    // MARK: - Actions
     @IBAction func didTapExitButton(_ sender: Any) {
         musicPlayer.stopAudio()
         dismiss(animated: true)

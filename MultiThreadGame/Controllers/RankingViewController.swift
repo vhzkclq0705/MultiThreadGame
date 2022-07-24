@@ -9,16 +9,20 @@ import UIKit
 
 class RankingViewController: UIViewController {
 
+    // MARK: - UI
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Property
     let rankManager = RankManager.shared
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setViewController()
         fetchRank()
     }
     
+    // MARK: - Setup
     func setViewController() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -27,15 +31,16 @@ class RankingViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: "RankingTableViewCell")
     }
     
+    // MARK: - Funcs
     func fetchRank() {
         rankManager.loadRank()
     }
 
 }
 
+// MARK: - TableView
 extension RankingViewController: UITableViewDelegate,
                                  UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rankManager.numOfRanks
     }

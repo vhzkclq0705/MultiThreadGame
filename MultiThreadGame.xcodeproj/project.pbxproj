@@ -19,7 +19,6 @@
 		76239199288D937100790775 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76239198288D937100790775 /* Rank.swift */; };
 		768FE5362887F2DC00B0F76D /* boom.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE5352887F2DC00B0F76D /* boom.mp4 */; };
 		768FE53D2887F3C900B0F76D /* medium.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE5392887F3C700B0F76D /* medium.mp3 */; };
-		768FE53E2887F3C900B0F76D /* hard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE53A2887F3C800B0F76D /* hard.mp3 */; };
 		768FE53F2887F3C900B0F76D /* easy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE53B2887F3C800B0F76D /* easy.mp3 */; };
 		768FE5402887F3C900B0F76D /* ready.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE53C2887F3C900B0F76D /* ready.mp3 */; };
 		768FE5422887F3D000B0F76D /* Spacecard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 768FE5412887F3D000B0F76D /* Spacecard.ttf */; };
@@ -27,6 +26,7 @@
 		768FE5482888051800B0F76D /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FE5472888051800B0F76D /* MusicPlayer.swift */; };
 		768FE5502888174B00B0F76D /* teemo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE54F2888174B00B0F76D /* teemo.mp3 */; };
 		76E0957B288DAE6F007E00D6 /* RankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0957A288DAE6F007E00D6 /* RankManager.swift */; };
+		76E0957D288DC8BD007E00D6 /* hard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E0957C288DC8BD007E00D6 /* hard.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,6 @@
 		76239198288D937100790775 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
 		768FE5352887F2DC00B0F76D /* boom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = boom.mp4; sourceTree = "<group>"; };
 		768FE5392887F3C700B0F76D /* medium.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = medium.mp3; sourceTree = "<group>"; };
-		768FE53A2887F3C800B0F76D /* hard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hard.mp3; sourceTree = "<group>"; };
 		768FE53B2887F3C800B0F76D /* easy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = easy.mp3; sourceTree = "<group>"; };
 		768FE53C2887F3C900B0F76D /* ready.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ready.mp3; sourceTree = "<group>"; };
 		768FE5412887F3D000B0F76D /* Spacecard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spacecard.ttf; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		768FE5472888051800B0F76D /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		768FE54F2888174B00B0F76D /* teemo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teemo.mp3; sourceTree = "<group>"; };
 		76E0957A288DAE6F007E00D6 /* RankManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankManager.swift; sourceTree = "<group>"; };
+		76E0957C288DC8BD007E00D6 /* hard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hard.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +140,8 @@
 			children = (
 				768FE54F2888174B00B0F76D /* teemo.mp3 */,
 				768FE53B2887F3C800B0F76D /* easy.mp3 */,
-				768FE53A2887F3C800B0F76D /* hard.mp3 */,
 				768FE5392887F3C700B0F76D /* medium.mp3 */,
+				76E0957C288DC8BD007E00D6 /* hard.mp3 */,
 				768FE53C2887F3C900B0F76D /* ready.mp3 */,
 			);
 			path = MP3;
@@ -234,6 +234,7 @@
 				76239196288D917100790775 /* RankingTableViewCell.xib in Resources */,
 				768FE53F2887F3C900B0F76D /* easy.mp3 in Resources */,
 				7610DD952887205500CA03BC /* LaunchScreen.storyboard in Resources */,
+				76E0957D288DC8BD007E00D6 /* hard.mp3 in Resources */,
 				768FE53D2887F3C900B0F76D /* medium.mp3 in Resources */,
 				768FE5422887F3D000B0F76D /* Spacecard.ttf in Resources */,
 				7610DD922887205500CA03BC /* Assets.xcassets in Resources */,
@@ -241,7 +242,6 @@
 				768FE5402887F3C900B0F76D /* ready.mp3 in Resources */,
 				768FE5362887F2DC00B0F76D /* boom.mp4 in Resources */,
 				7610DD902887205200CA03BC /* Main.storyboard in Resources */,
-				768FE53E2887F3C900B0F76D /* hard.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

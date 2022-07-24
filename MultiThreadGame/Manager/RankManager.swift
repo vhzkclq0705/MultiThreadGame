@@ -9,10 +9,13 @@ import Foundation
 
 class RankManager {
     
+    // 싱글톤 패턴
     static let shared = RankManager()
     
+    // MARK: - Property
     var rankList = [Rank]()
     
+    // MARK: - Cell UI
     var numOfRanks: Int {
         return rankList.count
     }
@@ -21,6 +24,7 @@ class RankManager {
         return rankList[index]
     }
     
+    // MARK: - Save and load data
     func saveRank(score: Int, difficulty: Int) {
         loadRank()
         
