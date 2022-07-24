@@ -25,10 +25,6 @@ class RankingViewController: UIViewController {
         
         let cellNib = UINib(nibName: "RankingTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "RankingTableViewCell")
-        let headerNib = UINib(nibName: "RankingTableViewHeaderView", bundle: nil)
-        tableView.register(
-            headerNib,
-            forHeaderFooterViewReuseIdentifier: "RankingTableViewHeaderView")
     }
     
     func fetchRank() {
@@ -39,14 +35,6 @@ class RankingViewController: UIViewController {
 
 extension RankingViewController: UITableViewDelegate,
                                  UITableViewDataSource {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let view = tableView.dequeueReusableHeaderFooterView(
-            withIdentifier: "RankingTableViewHeaderView") as? RankingTableViewHeaderView else {
-            return UIView()
-        }
-        
-        return view
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rankManager.numOfRanks

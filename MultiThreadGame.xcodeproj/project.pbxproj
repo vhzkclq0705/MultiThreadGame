@@ -26,8 +26,6 @@
 		768FE5442888040500B0F76D /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FE5432888040500B0F76D /* ReadyViewController.swift */; };
 		768FE5482888051800B0F76D /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FE5472888051800B0F76D /* MusicPlayer.swift */; };
 		768FE5502888174B00B0F76D /* teemo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768FE54F2888174B00B0F76D /* teemo.mp3 */; };
-		76E09576288DA6B5007E00D6 /* RankingTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */; };
-		76E09578288DA702007E00D6 /* RankingTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */; };
 		76E0957B288DAE6F007E00D6 /* RankManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E0957A288DAE6F007E00D6 /* RankManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +51,6 @@
 		768FE5432888040500B0F76D /* ReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
 		768FE5472888051800B0F76D /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		768FE54F2888174B00B0F76D /* teemo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teemo.mp3; sourceTree = "<group>"; };
-		76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewHeaderView.swift; sourceTree = "<group>"; };
-		76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewHeaderView.xib; sourceTree = "<group>"; };
 		76E0957A288DAE6F007E00D6 /* RankManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +105,6 @@
 		76239192288D914F00790775 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				76E09575288DA6B5007E00D6 /* RankingTableViewHeaderView.swift */,
-				76E09577288DA702007E00D6 /* RankingTableViewHeaderView.xib */,
 				76239193288D917000790775 /* RankingTableViewCell.swift */,
 				76239194288D917000790775 /* RankingTableViewCell.xib */,
 			);
@@ -237,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E09578288DA702007E00D6 /* RankingTableViewHeaderView.xib in Resources */,
 				76239196288D917100790775 /* RankingTableViewCell.xib in Resources */,
 				768FE53F2887F3C900B0F76D /* easy.mp3 in Resources */,
 				7610DD952887205500CA03BC /* LaunchScreen.storyboard in Resources */,
@@ -262,7 +255,6 @@
 				768FE5482888051800B0F76D /* MusicPlayer.swift in Sources */,
 				76E0957B288DAE6F007E00D6 /* RankManager.swift in Sources */,
 				76239199288D937100790775 /* Rank.swift in Sources */,
-				76E09576288DA6B5007E00D6 /* RankingTableViewHeaderView.swift in Sources */,
 				768FE5442888040500B0F76D /* ReadyViewController.swift in Sources */,
 				7610DD8D2887205200CA03BC /* PlayViewController.swift in Sources */,
 				7610DD892887205200CA03BC /* AppDelegate.swift in Sources */,
