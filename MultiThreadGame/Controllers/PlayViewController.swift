@@ -53,20 +53,18 @@ class PlayViewController: UIViewController {
     
     // MARK: - Setup
     func setViewController() {
-        DispatchQueue.main.async {
-            switch self.image {
-            case 0: self.spaceShip.image = UIImage(named: "ship1")
-            case 1: self.spaceShip.image = UIImage(named: "ship2")
-            case 2: self.spaceShip.image = UIImage(named: "ship3")
-            default: break
-            }
-            
-            switch self.difficulty {
-            case 0: self.backgroundView.image = UIImage(named: "background2")
-            case 1: self.backgroundView.image = UIImage(named: "background3")
-            case 2: self.backgroundView.image = UIImage(named: "background4")
-            default: break
-            }
+        switch self.image {
+        case 0: self.spaceShip.image = UIImage(named: "ship1")
+        case 1: self.spaceShip.image = UIImage(named: "ship2")
+        case 2: self.spaceShip.image = UIImage(named: "ship3")
+        default: break
+        }
+        
+        switch self.difficulty {
+        case 0: self.backgroundView.image = UIImage(named: "background2")
+        case 1: self.backgroundView.image = UIImage(named: "background3")
+        case 2: self.backgroundView.image = UIImage(named: "background4")
+        default: break
         }
     }
     
@@ -87,7 +85,7 @@ class PlayViewController: UIViewController {
         musicPlayer.stopAudio()
     }
     
-    func startGame() {
+    func setBulletDirection(_ right: Bool) {
         DispatchQueue.global(qos: .userInteractive).async {
             while self.die == false {
                 var sec: Float!
@@ -100,7 +98,7 @@ class PlayViewController: UIViewController {
                 
                 if self.bulletLimit > 0 {
                     DispatchQueue.main.async {
-                        self.moveRight()
+                        right ? self.moveRight() : self.moveLeft()
                         self.bulletLimit -= 1
                     }
                 }
@@ -108,28 +106,9 @@ class PlayViewController: UIViewController {
                 usleep(useconds_t(sec * 100000))
             }
         }
-        
-        DispatchQueue.global(qos: .userInteractive).async {
-            while self.die == false {
-                var sec: Float!
-                switch self.difficulty {
-                case 0: sec = Float.random(in: 1..<5)
-                case 1: sec = Float.random(in: 0.5..<4)
-                case 2: sec = Float.random(in: 0..<3)
-                default: break
-                }
-                
-                if self.bulletLimit > 0 {
-                    DispatchQueue.main.async {
-                        self.moveLeft()
-                        self.bulletLimit -= 1
-                    }
-                }
-                
-                usleep(useconds_t(sec * 100000))
-            }
-        }
-        
+    }
+    
+    func increaseScore() {
         DispatchQueue.global(qos: .userInteractive).async {
             while self.die == false {
                 switch self.difficulty {
@@ -146,6 +125,12 @@ class PlayViewController: UIViewController {
                 usleep(100000)
             }
         }
+    }
+    
+    func startGame() {
+        setBulletDirection(true)
+        setBulletDirection(false)
+        increaseScore()
     }
     
     func createBullets(x: CGFloat, y: CGFloat) -> UIImageView {
